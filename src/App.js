@@ -10,10 +10,9 @@ function App() {
       <> 
      <meta name="description" content="Little Lemon Restaurant Webpage"/>
      <meta name="og:title" content="Little Lemon Restaurant"/>
-     <meta name="og:description" content=""/>
+     <meta name="og:description" content="A restaurant with amazing flavors that you can order online"/>
      <meta name="og:image" content={metaimg}/>
      
-      <Header/>
       <Nav/>
       <Main/> 
       <Footer/>
