@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla&family=Markazi+Text:wght@500&display=swap');
+
+$fontKarla : 'Karla', sans-serif;
+$fontMarkazi : 'Markazi Text', serif;
+
+$colorPrimary1: #495E57;
+$colorPrimary2: #F4CE14;
+$colorSecondary1: #EE9972;
+$colorSecondary2: #FBDABB;
+$colorHighlight1: #EDEFEE;
+$colorHighlight2: #333333;
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    width: min(100%, 1920px);
+    margin-inline: auto;
+    height: auto;
+}
+
+
+// navbar css
+.navContainer{
+    font-family: $fontKarla;
+    font-weight: 600;
+    font-size: 1.2rem;
+    box-shadow: 0px 2px 0px 0px $colorPrimary2;
+    margin-bottom: 1px;
+    position: sticky;
+    display: flex;
+    height: 100px;
+    top: 0;
+    background-color: white;
+    transition: background-color 0.3s ease;
+        .nav{
+            display: flex;
+            width: min(80%, 1920px);
+            margin-inline: auto;
+            img{
+                width: 25%;
+                padding: 1%;
+               }
+               ul{
+                list-style: none;
+                display: flex;
+                width: 100%;
+                justify-content:space-between;
+                align-items: center;
+                padding-left: 5%;
+                    li a{
+                       text-decoration:none;
+                       color: $colorPrimary1;
+                    }
+               }
+               .burger-menu {
+                display: none;
+                font-size: 24px;
+                cursor: pointer;
+            }
+        }
+}
+
+
+//header css
+
+.headerContainer{
+    background-color: $colorPrimary1;
+    margin-bottom: 100px;
+    .header{
+        display: flex;
+        flex-direction: row;
+        width: min(80%, 1920px);
+        height: 40vh;
+        margin-inline: auto;
+        font-family: $fontMarkazi;
+        .headerLeft{
+            width: 50%;
+            padding: 2%;
+            h1{
+                color: $colorPrimary2;
+                font-size: 4rem;
+                font-weight: 500;
+            }
+            span{
+                font-size: 3rem;
+                color: $colorHighlight1;
+            }
+            p{
+                padding: 0 25% 1% 1%;
+                font-size: 1.5rem;
+                color: $colorHighlight1;
+
+            }
+            button{
+                margin: 5px;
+                width: 180px;
+                height: 50px;
+                border: 0px solid;
+                border-radius: 5px;
+                background-color: $colorPrimary2;
+                color: $colorHighlight2;
+                font-family: $fontMarkazi;
+                font-size: 1.3rem;
+                font-weight: 500;
+                cursor: pointer;
+            }
+        }
+        .headerRight{
+            width: 50%;
+            display: flex;
+            justify-content: center;
+            img{
+                width: 60%;
+                height: 110%;
+                margin: 25px;
+                border: 0px solid;
+                border-radius: 15px;
+                user-zoom: none;
+            }
+        }
+    }
+}
+
+
+
+
+
+@media (max-width: 768px) {
+    .navContainer{
+        justify-content:space-around;
+        ul{
+            display: none;
+            flex-direction: column;
+            position: absolute;
+            top: 100px;
+            left: 0;
+            background-color: #333;
+            width: 100%;
+            text-align: center;
+        }
+        ul.active {
+            display: flex;
+        }
+        .burger-menu {
+            display: block;
+            padding: 1%;
+        }
+    }
+
+}
