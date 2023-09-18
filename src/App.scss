@@ -28,8 +28,8 @@ $colorHighlight2: #333333;
 // navbar css
 .navContainer{
     font-family: $fontKarla;
-    font-weight: 600;
-    font-size: 1.2rem;
+    font-weight: 500;
+    font-size: 1.1rem;
     box-shadow: 0px 2px 0px 0px $colorPrimary2;
     margin-bottom: 1px;
     position: sticky;
@@ -40,7 +40,7 @@ $colorHighlight2: #333333;
     transition: background-color 0.3s ease;
         .nav{
             display: flex;
-            width: min(80%, 1920px);
+            width: min(60%, 1920px);
             margin-inline: auto;
             img{
                 width: 25%;
@@ -52,7 +52,7 @@ $colorHighlight2: #333333;
                 width: 100%;
                 justify-content:space-between;
                 align-items: center;
-                padding-left: 5%;
+                padding-left: 15%;
                     li a{
                        text-decoration:none;
                        color: $colorPrimary1;
@@ -75,13 +75,14 @@ $colorHighlight2: #333333;
     .header{
         display: flex;
         flex-direction: row;
-        width: min(80%, 1920px);
-        height: 40vh;
+        align-items: center;
+        width: min(60%, 1920px);
+        height: 400px;
         margin-inline: auto;
         font-family: $fontMarkazi;
         .headerLeft{
             width: 50%;
-            padding: 2%;
+            padding: 1%;
             h1{
                 color: $colorPrimary2;
                 font-size: 4rem;
@@ -104,24 +105,26 @@ $colorHighlight2: #333333;
                 border: 0px solid;
                 border-radius: 5px;
                 background-color: $colorPrimary2;
-                color: $colorHighlight2;
+                color: black;
                 font-family: $fontMarkazi;
-                font-size: 1.3rem;
-                font-weight: 500;
+                font-size: 1.4rem;
+                font-weight: 600;
                 cursor: pointer;
             }
         }
         .headerRight{
             width: 50%;
+            height: 100%;
             display: flex;
             justify-content: center;
+            align-items: center;
             img{
-                width: 60%;
-                height: 110%;
-                margin: 25px;
+                width: 300px;
+                height: 300px;
                 border: 0px solid;
                 border-radius: 15px;
                 user-zoom: none;
+                object-fit: cover;
             }
         }
     }

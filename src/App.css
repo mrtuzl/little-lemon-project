@@ -15,8 +15,8 @@
 
 .navContainer {
   font-family: "Karla", sans-serif;
-  font-weight: 600;
-  font-size: 1.2rem;
+  font-weight: 500;
+  font-size: 1.1rem;
   box-shadow: 0px 2px 0px 0px #F4CE14;
   margin-bottom: 1px;
   position: -webkit-sticky;
@@ -29,7 +29,7 @@
 }
 .navContainer .nav {
   display: flex;
-  width: min(80%, 1920px);
+  width: min(60%, 1920px);
   margin-inline: auto;
 }
 .navContainer .nav img {
@@ -42,7 +42,7 @@
   width: 100%;
   justify-content: space-between;
   align-items: center;
-  padding-left: 5%;
+  padding-left: 15%;
 }
 .navContainer .nav ul li a {
   text-decoration: none;
@@ -61,14 +61,15 @@
 .headerContainer .header {
   display: flex;
   flex-direction: row;
-  width: min(80%, 1920px);
-  height: 40vh;
+  align-items: center;
+  width: min(60%, 1920px);
+  height: 400px;
   margin-inline: auto;
   font-family: "Markazi Text", serif;
 }
 .headerContainer .header .headerLeft {
   width: 50%;
-  padding: 2%;
+  padding: 1%;
 }
 .headerContainer .header .headerLeft h1 {
   color: #F4CE14;
@@ -91,24 +92,27 @@
   border: 0px solid;
   border-radius: 5px;
   background-color: #F4CE14;
-  color: #333333;
+  color: black;
   font-family: "Markazi Text", serif;
-  font-size: 1.3rem;
-  font-weight: 500;
+  font-size: 1.4rem;
+  font-weight: 600;
   cursor: pointer;
 }
 .headerContainer .header .headerRight {
   width: 50%;
+  height: 100%;
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 .headerContainer .header .headerRight img {
-  width: 60%;
-  height: 110%;
-  margin: 25px;
+  width: 300px;
+  height: 300px;
   border: 0px solid;
   border-radius: 15px;
   user-zoom: none;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 @media (max-width: 768px) {
