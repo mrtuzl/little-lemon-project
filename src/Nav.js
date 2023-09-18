@@ -1,21 +1,24 @@
 import logo from '../src/Logo.svg';
+import { NavLink} from 'react-router-dom';
 
 function Nav() {
   return (
+  
       <div className='navContainer'> 
       <div className="nav"> 
           <img src={logo} alt="little-lemon-logo"/>
           <ul className="active">
-            <li> <a href=""> Home </a></li>
-            <li> <a href=""> About </a></li>
-            <li> <a href=""> Menu </a></li>
-            <li> <a href=""> Reservation </a></li>
-            <li> <a href=""> Order Online </a></li>
-            <li> <a href=""> Login </a></li>
+            <li> <NavLink to="/"> Home </NavLink>  </li>
+            <li> <NavLink to="/"> About </NavLink> </li>
+            <li> <NavLink to="/"> Menu </NavLink>  </li>
+            <li> <NavLink to="/"> Reservation </NavLink></li>
+            <li> <NavLink to="/"> Order Online </NavLink></li>
+            <li> <NavLink to="/"> Login </NavLink></li>
           </ul>
           <div class="burger-menu active">&#9776;</div>
       </div>
       </div>
+    
   );
 }
 

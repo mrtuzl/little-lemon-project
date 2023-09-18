@@ -19,7 +19,6 @@
   font-size: 1.1rem;
   box-shadow: 0px 2px 0px 0px #F4CE14;
   margin-bottom: 1px;
-  position: -webkit-sticky;
   position: sticky;
   display: flex;
   height: 100px;
@@ -35,6 +34,7 @@
 .navContainer .nav img {
   width: 25%;
   padding: 1%;
+  cursor: pointer;
 }
 .navContainer .nav ul {
   list-style: none;
@@ -54,11 +54,10 @@
   cursor: pointer;
 }
 
-.headerContainer {
+.ctaContainer {
   background-color: #495E57;
-  margin-bottom: 100px;
 }
-.headerContainer .header {
+.ctaContainer .cta {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -67,30 +66,30 @@
   margin-inline: auto;
   font-family: "Markazi Text", serif;
 }
-.headerContainer .header .headerLeft {
+.ctaContainer .cta .ctaLeft {
   width: 50%;
   padding: 1%;
 }
-.headerContainer .header .headerLeft h1 {
+.ctaContainer .cta .ctaLeft h1 {
   color: #F4CE14;
   font-size: 4rem;
   font-weight: 500;
 }
-.headerContainer .header .headerLeft span {
+.ctaContainer .cta .ctaLeft span {
   font-size: 3rem;
   color: #EDEFEE;
 }
-.headerContainer .header .headerLeft p {
+.ctaContainer .cta .ctaLeft p {
   padding: 0 25% 1% 1%;
   font-size: 1.5rem;
   color: #EDEFEE;
 }
-.headerContainer .header .headerLeft button {
+.ctaContainer .cta .ctaLeft button {
   margin: 5px;
   width: 180px;
   height: 50px;
   border: 0px solid;
-  border-radius: 5px;
+  border-radius: 10px;
   background-color: #F4CE14;
   color: black;
   font-family: "Markazi Text", serif;
@@ -98,21 +97,147 @@
   font-weight: 600;
   cursor: pointer;
 }
-.headerContainer .header .headerRight {
+.ctaContainer .cta .ctaRight {
   width: 50%;
   height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.headerContainer .header .headerRight img {
+.ctaContainer .cta .ctaRight img {
+  -o-object-fit: cover;
+     object-fit: cover;
   width: 300px;
   height: 300px;
   border: 0px solid;
   border-radius: 15px;
   user-zoom: none;
+}
+
+.specialsContainer .specials {
+  display: flex;
+  flex-direction: column;
+  width: min(60%, 1920px);
+  height: 600px;
+  margin-inline: auto;
+  font-family: "Markazi Text", serif;
+  padding: 1%;
+}
+.specialsContainer .specials .specialsTop {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+.specialsContainer .specials .specialsTop h1 {
+  font-size: 3rem;
+  font-weight: 500;
+}
+.specialsContainer .specials .specialsTop button {
+  margin: 5px;
+  width: 180px;
+  height: 50px;
+  border: 0px solid;
+  border-radius: 10px;
+  background-color: #F4CE14;
+  color: black;
+  font-family: "Markazi Text", serif;
+  font-size: 1.4rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+.specialsContainer .specials .specialsBottom {
+  display: flex;
+  justify-content: space-between;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  width: 275px;
+  height: 500px;
+  background-color: #EDEFEE;
+  border-radius: 15px;
+}
+.card img {
   -o-object-fit: cover;
      object-fit: cover;
+  width: 275px;
+  height: 250px;
+  border: 0px solid;
+  border-top-right-radius: 15px;
+  border-top-left-radius: 15px;
+  user-zoom: none;
+}
+.card .cardBottom {
+  height: 50%;
+  padding: 10%;
+}
+.card .cardBottom .name-price {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+.card .cardBottom .name-price :nth-child(2) {
+  color: #EE9972;
+}
+.card .cardBottom span {
+  font-weight: 600;
+  font-family: "Markazi Text", serif;
+  font-size: 1.2rem;
+}
+.card .cardBottom .description {
+  font-family: "Karla", sans-serif;
+  font-size: 1rem;
+  height: 70%;
+}
+.card .cardBottom .order {
+  display: flex;
+  justify-content: flex-start;
+  cursor: pointer;
+}
+.card .cardBottom .order :nth-child(2) {
+  margin-left: 10px;
+}
+
+.customerSays {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: min(60%, 1920px);
+  height: 550px;
+  margin-inline: auto;
+  font-family: "Markazi Text", serif;
+  padding: 1%;
+}
+.customerSays .csTitle {
+  font-size: 1.5rem;
+  font-weight: 400;
+  margin-bottom: 10px;
+}
+.customerSays .csContent {
+  width: 100%;
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.customerSays .csContent .csContentTop {
+  display: flex;
+  justify-content: space-between;
+}
+.customerSays .csContent .csContentBottom {
+  display: flex;
+  justify-content: space-between;
+}
+
+.testimonial {
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  height: 200px;
+  background-color: #EDEFEE;
+  border-radius: 15px;
 }
 
 @media (max-width: 768px) {

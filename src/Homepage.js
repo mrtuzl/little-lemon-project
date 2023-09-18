@@ -1,16 +1,16 @@
 import React from 'react'
 import Specials from './Specials.js';
-import Testimonials from './Testimonials.js';
+import CustomersSay from './CustomersSay.js';
 import About from './About.js';
 
-function Main() {
+function Homepage() {
   return (
       <> 
         <Specials/> 
-        <Testimonials/>
+        <CustomersSay/>
         <About/>
       </>
   );
 }
 
-export default Main;
+export default Homepage;

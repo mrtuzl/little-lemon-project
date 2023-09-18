@@ -22,6 +22,7 @@ $colorHighlight2: #333333;
     width: min(100%, 1920px);
     margin-inline: auto;
     height: auto;
+ 
 }
 
 
@@ -45,6 +46,7 @@ $colorHighlight2: #333333;
             img{
                 width: 25%;
                 padding: 1%;
+                cursor: pointer;
                }
                ul{
                 list-style: none;
@@ -67,12 +69,11 @@ $colorHighlight2: #333333;
 }
 
 
-//header css
+//call to action css
 
-.headerContainer{
+.ctaContainer{
     background-color: $colorPrimary1;
-    margin-bottom: 100px;
-    .header{
+    .cta{
         display: flex;
         flex-direction: row;
         align-items: center;
@@ -80,7 +81,8 @@ $colorHighlight2: #333333;
         height: 400px;
         margin-inline: auto;
         font-family: $fontMarkazi;
-        .headerLeft{
+    
+        .ctaLeft{
             width: 50%;
             padding: 1%;
             h1{
@@ -103,7 +105,7 @@ $colorHighlight2: #333333;
                 width: 180px;
                 height: 50px;
                 border: 0px solid;
-                border-radius: 5px;
+                border-radius: 10px;
                 background-color: $colorPrimary2;
                 color: black;
                 font-family: $fontMarkazi;
@@ -112,23 +114,169 @@ $colorHighlight2: #333333;
                 cursor: pointer;
             }
         }
-        .headerRight{
+        .ctaRight{
             width: 50%;
             height: 100%;
             display: flex;
             justify-content: center;
             align-items: center;
             img{
+                object-fit: cover;
                 width: 300px;
                 height: 300px;
                 border: 0px solid;
                 border-radius: 15px;
                 user-zoom: none;
-                object-fit: cover;
+    
             }
         }
     }
 }
+
+
+// specials css
+
+.specialsContainer{
+    .specials{
+        display: flex;
+        flex-direction: column;
+        width: min(60%, 1920px);
+        height: 600px;
+        margin-inline: auto;
+        font-family: $fontMarkazi;
+        padding: 1%;
+        .specialsTop{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            margin-bottom: 20px;
+            h1{
+                font-size: 3rem;
+                font-weight: 500;
+            }
+            button{
+                margin: 5px;
+                width: 180px;
+                height: 50px;
+                border: 0px solid;
+                border-radius: 10px;
+                background-color: $colorPrimary2;
+                color: black;
+                font-family: $fontMarkazi;
+                font-size: 1.4rem;
+                font-weight: 600;
+                cursor: pointer;
+            }
+        }
+        .specialsBottom{
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+}
+
+// card css
+ 
+.card{
+    display: flex;
+    flex-direction: column;
+    width: 275px;
+    height: 500px;
+    background-color: $colorHighlight1;
+    border-radius: 15px;
+    img{
+        object-fit: cover;
+        width: 275px;
+        height: 250px;
+        border: 0px solid;
+        border-top-right-radius: 15px;
+        border-top-left-radius: 15px;
+        user-zoom: none;
+
+    }
+    .cardBottom{
+        height: 50%;
+        padding: 10%;
+       .name-price{
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 10px;
+        :nth-child(2){
+        color: $colorSecondary1;
+        }
+       }
+        span{
+            font-weight: 600;
+            font-family: $fontMarkazi;
+            font-size: 1.2rem;
+        }
+        .description{
+            font-family: $fontKarla;
+            font-size: 1rem;
+            height: 70%;
+        }
+        .order{
+            display: flex;
+            justify-content:flex-start;
+            :nth-child(2){
+               margin-left: 10px;
+                }
+                cursor: pointer;
+        }
+     
+    }
+}
+
+// customers says css
+
+    .customerSays{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: min(60%, 1920px);
+        height: 550px;
+        margin-inline: auto;
+        font-family: $fontMarkazi;
+        padding: 1%;
+       
+        .csTitle{
+            font-size: 1.5rem;
+            font-weight: 400;
+            margin-bottom: 10px;
+        }
+        .csContent{
+            width: 100%;
+            height: 90%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+
+          .csContentTop{
+            display: flex;
+            justify-content:space-between;
+
+          }
+          .csContentBottom{
+            display: flex;
+            justify-content:space-between;
+
+          }
+          
+        }
+    }
+
+// testimonial css
+
+ .testimonial{
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    height: 200px;
+    background-color: $colorHighlight1;
+    border-radius: 15px;
+ }
+
+
 
 
 
