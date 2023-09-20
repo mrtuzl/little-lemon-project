@@ -9,7 +9,7 @@ $colorSecondary1: #EE9972;
 $colorSecondary2: #FBDABB;
 $colorHighlight1: #EDEFEE;
 $colorHighlight2: #333333;
-
+// desktop version
 *{
     margin: 0px;
     padding: 0px;
@@ -39,6 +39,7 @@ $colorHighlight2: #333333;
     top: 0;
     background-color: white;
     transition: background-color 0.3s ease;
+    z-index: 1;
         .nav{
             display: flex;
             width: min(60%, 1920px);
@@ -54,7 +55,7 @@ $colorHighlight2: #333333;
                 width: 100%;
                 justify-content:space-between;
                 align-items: center;
-                padding-left: 15%;
+                padding-left: 10%;
                     li a{
                        text-decoration:none;
                        color: $colorPrimary1;
@@ -81,10 +82,10 @@ $colorHighlight2: #333333;
         height: 400px;
         margin-inline: auto;
         font-family: $fontMarkazi;
-    
+        padding: 1%;
         .ctaLeft{
-            width: 50%;
-            padding: 1%;
+            width: 70%;
+         
             h1{
                 color: $colorPrimary2;
                 font-size: 4rem;
@@ -115,18 +116,19 @@ $colorHighlight2: #333333;
             }
         }
         .ctaRight{
-            width: 50%;
+            width: 30%;
             height: 100%;
             display: flex;
-            justify-content: center;
+            justify-content: flex-end;
             align-items: center;
             img{
                 object-fit: cover;
-                width: 300px;
-                height: 300px;
+                width: 100%;
+                height: 80%;
                 border: 0px solid;
                 border-radius: 15px;
                 user-zoom: none;
+                box-shadow: 0px 1px 10px 1px $colorHighlight2;
     
             }
         }
@@ -140,8 +142,9 @@ $colorHighlight2: #333333;
     .specials{
         display: flex;
         flex-direction: column;
+        justify-content: center;
         width: min(60%, 1920px);
-        height: 600px;
+        height: 750px;
         margin-inline: auto;
         font-family: $fontMarkazi;
         padding: 1%;
@@ -180,13 +183,13 @@ $colorHighlight2: #333333;
 .card{
     display: flex;
     flex-direction: column;
-    width: 275px;
-    height: 500px;
+    width: 30%;
+    height: auto;
     background-color: $colorHighlight1;
     border-radius: 15px;
     img{
         object-fit: cover;
-        width: 275px;
+        width: 100%;
         height: 250px;
         border: 0px solid;
         border-top-right-radius: 15px;
@@ -218,6 +221,8 @@ $colorHighlight2: #333333;
         .order{
             display: flex;
             justify-content:flex-start;
+            margin-top: 10px;
+            margin-bottom: 30px;
             :nth-child(2){
                margin-left: 10px;
                 }
@@ -228,80 +233,189 @@ $colorHighlight2: #333333;
 }
 
 // customers says css
-
+ .customerSaysContainer{
+    background-color: $colorHighlight1;
     .customerSays{
         display: flex;
         flex-direction: column;
         align-items: center;
+        justify-content: center;
         width: min(60%, 1920px);
-        height: 550px;
+        height: 500px;
         margin-inline: auto;
         font-family: $fontMarkazi;
         padding: 1%;
-       
         .csTitle{
             font-size: 1.5rem;
             font-weight: 400;
-            margin-bottom: 10px;
+            margin-bottom: 50px;
         }
         .csContent{
             width: 100%;
-            height: 90%;
             display: flex;
-            flex-direction: column;
             justify-content: space-around;
 
-          .csContentTop{
-            display: flex;
-            justify-content:space-between;
-
-          }
-          .csContentBottom{
-            display: flex;
-            justify-content:space-between;
-
-          }
-          
         }
     }
+ }
+    
 
 // testimonial css
 
  .testimonial{
     display: flex;
     flex-direction: column;
-    width: 200px;
+    justify-content: center;
+    align-items: center;
+    width: 20%;
     height: 200px;
-    background-color: $colorHighlight1;
+    background-color: white;
     border-radius: 15px;
+    
+    .tIcon{
+        margin: 10px;
+    }
+    .tName{
+        width: 75%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        margin-bottom: 10px;
+    }
+    .tComment{
+        width: 80%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    img{
+        border-radius: 100px;
+        width: 50px;
+    }
  }
 
 
+//chicago css
 
+.chicagoContainer{
 
+    .chicago{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        width: min(60%, 1920px);
+        height: 700px;
+        margin-inline: auto;
+        font-family: $fontKarla;
+        padding: 1%;
+        .chicagoLeft{
+            width: 40%;
+         
+            h1{
+                color: $colorPrimary2;
+                font-size: 4rem;
+                font-weight: 600;
+              
+            }
+            span{
+                font-size: 2.5rem;
+                color: $colorPrimary1;
+            }
+            p{
+                padding: 5% 5% 1% 1%;
+                font-size: 1rem;
+                color: $colorPrimary1;
+              
+            }
 
-
-
-@media (max-width: 768px) {
-    .navContainer{
-        justify-content:space-around;
-        ul{
-            display: none;
-            flex-direction: column;
-            position: absolute;
-            top: 100px;
-            left: 0;
-            background-color: #333;
-            width: 100%;
-            text-align: center;
         }
-        ul.active {
+        .chicagoRight{
+            width: 60%;
+            height: 100%;
             display: flex;
-        }
-        .burger-menu {
-            display: block;
-            padding: 1%;
+            justify-content:space-between;
+            align-items: center;
+            padding-left: 10%;
+            position: relative;
+          
+            img:nth-child(2){
+                position: relative;
+                object-fit:cover;
+                width: 300px;
+                height: 300px;
+                margin-bottom: -20%;
+                box-shadow: 0px 1px 10px 1px $colorHighlight2;
+    
+            }
+            img:nth-child(1){
+                position: absolute;
+                left: 40%;
+                margin-bottom: 15%;
+                object-fit: cover;
+                width: 300px;
+                height: 300px;
+                box-shadow: 0px 1px 10px 1px $colorHighlight2;
+                
+            }
+          
         }
     }
-
 }
+
+
+// footer css
+.footerContainer{
+    background-color: $colorHighlight2;
+    .footer{
+        display: flex;
+        justify-content:space-around;
+        width: min(60%, 1920px);
+        height: 350px;
+        margin-inline: auto;
+        font-family: $fontKarla;
+        color: $colorHighlight1;
+        padding: 5% 1% 1% 1%;
+        li{
+            list-style: none;
+            line-height: 1.5;
+            cursor: pointer;
+            
+        }
+        li:first-child {
+            font-weight: 600;
+            margin-bottom: 10px;
+        }   
+        .footerImg{
+            width: 25%;
+
+            img{
+                object-fit:cover;
+                width: 200px;
+                height: 150px;
+                border: 2px solid $colorHighlight1;
+                box-shadow: 0px 1px 10px 1px rgba(255,255,255,1);
+
+            }
+        }
+      
+    }
+ }
+
+ // tablet version
+ @media (max-width: 1024px) {
+    .container{
+
+    }
+  }
+
+
+
+
+
+  
+ // telefon version
+ @media (max-width: 768px) {
+    .container{
+        
+    }
+  }

@@ -1,14 +1,14 @@
 import React from 'react'
 import Specials from './Specials.js';
 import CustomersSay from './CustomersSay.js';
-import About from './About.js';
+import Chicago from './Chicago.js';
 
 function Homepage() {
   return (
       <> 
         <Specials/> 
         <CustomersSay/>
-        <About/>
+        <Chicago/>
       </>
   );
 }
