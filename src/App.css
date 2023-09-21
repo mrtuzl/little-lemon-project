@@ -50,11 +50,6 @@
   text-decoration: none;
   color: #495E57;
 }
-.navContainer .nav .burger-menu {
-  display: none;
-  font-size: 24px;
-  cursor: pointer;
-}
 
 .ctaContainer {
   background-color: #495E57;
@@ -215,10 +210,10 @@
   align-items: center;
   justify-content: center;
   width: min(60%, 1920px);
-  height: 500px;
+  height: auto;
   margin-inline: auto;
   font-family: "Markazi Text", serif;
-  padding: 1%;
+  padding: 5% 0 5% 0%;
 }
 .customerSaysContainer .customerSays .csTitle {
   font-size: 1.5rem;
@@ -236,7 +231,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 20%;
+  width: 150px;
   height: 200px;
   background-color: white;
   border-radius: 15px;
@@ -267,10 +262,10 @@
   flex-direction: row;
   align-items: center;
   width: min(60%, 1920px);
-  height: 700px;
+  height: auto;
   margin-inline: auto;
   font-family: "Karla", sans-serif;
-  padding: 1%;
+  padding: 5%;
 }
 .chicagoContainer .chicago .chicagoLeft {
   width: 40%;
@@ -340,9 +335,6 @@
   font-weight: 600;
   margin-bottom: 10px;
 }
-.footerContainer .footer .footerImg {
-  width: 25%;
-}
 .footerContainer .footer .footerImg img {
   -o-object-fit: cover;
      object-fit: cover;
@@ -350,4 +342,282 @@
   height: 150px;
   border: 2px solid #EDEFEE;
   box-shadow: 0px 1px 10px 1px rgb(255, 255, 255);
+}
+
+@media screen and (max-width: 1024px) {
+  .navContainer {
+    font-size: 0.8rem;
+    height: 80px;
+    transition: background-color 0.3s ease;
+    z-index: 1;
+  }
+  .ctaContainer .cta .ctaLeft h1 {
+    font-size: 3.5rem;
+    font-weight: 500;
+  }
+  .ctaContainer .cta .ctaLeft span {
+    font-size: 2.5rem;
+  }
+  .ctaContainer .cta .ctaLeft p {
+    padding: 0 15% 1% 1%;
+    font-size: 1.2rem;
+    color: #EDEFEE;
+  }
+  .ctaContainer .cta .ctaLeft button {
+    margin: 15px 5px 5px 5px;
+    width: 180px;
+    height: 45px;
+    border: 0px solid;
+    border-radius: 10px;
+    background-color: #F4CE14;
+    color: black;
+    font-family: "Markazi Text", serif;
+    font-size: 1.4rem;
+    font-weight: 600;
+    cursor: pointer;
+  }
+  .specialsContainer .specials {
+    width: min(60%, 1920px);
+    height: auto;
+    margin-inline: auto;
+    font-family: "Markazi Text", serif;
+    padding: 1%;
+  }
+  .specialsContainer .specials .specialsTop {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  .specialsContainer .specials .specialsTop h1 {
+    font-size: 2rem;
+    font-weight: 500;
+  }
+  .specialsContainer .specials .specialsTop button {
+    margin: 5px;
+    width: 180px;
+    height: 45px;
+    border: 0px solid;
+    border-radius: 10px;
+    background-color: #F4CE14;
+    color: black;
+    font-family: "Markazi Text", serif;
+    font-size: 1.4rem;
+    font-weight: 600;
+    cursor: pointer;
+  }
+  .specialsContainer .specials .specialsBottom {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .card {
+    width: 300px;
+    margin: 10px;
+  }
+  .card .cardBottom {
+    padding: 5%;
+  }
+  .card span {
+    font-weight: 600;
+    font-family: "Markazi Text", serif;
+    font-size: 1.2rem;
+  }
+  .csContent {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .csTitle {
+    font-size: 1.3rem !important;
+  }
+  .testimonial {
+    margin-bottom: 10px;
+  }
+  .chicagoLeft h1 {
+    font-size: 3rem !important;
+  }
+  .chicagoLeft span {
+    font-size: 1.5rem !important;
+  }
+  .chicagoLeft p {
+    padding: 5% 5% 1% 1%;
+    font-size: 0.8rem !important;
+  }
+  .chicagoRight img:nth-child(2) {
+    position: relative;
+    -o-object-fit: cover;
+       object-fit: cover;
+    width: 200px !important;
+    height: 200px !important;
+    margin-bottom: -20%;
+    box-shadow: 0px 1px 10px 1px #333333;
+  }
+  .chicagoRight img:nth-child(1) {
+    position: absolute;
+    left: 40%;
+    margin-bottom: 15%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    width: 200px !important;
+    height: 200px !important;
+    box-shadow: 0px 1px 10px 1px #333333;
+  }
+  .footer .footerImg img {
+    -o-object-fit: cover;
+       object-fit: cover;
+    width: 150px !important;
+    height: 100px;
+  }
+  .footer ul {
+    padding: 10%;
+  }
+  .footer li {
+    font-size: 0.8rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  .navContainer {
+    font-size: 0.8rem;
+    height: 80px;
+    transition: background-color 0.3s ease;
+    z-index: 1;
+  }
+  .navContainer .nav {
+    display: flex;
+    justify-content: space-around;
+  }
+  .navContainer .nav ul {
+    display: none;
+  }
+  .ctaContainer .cta .ctaLeft h1 {
+    font-size: 3.5rem;
+    font-weight: 500;
+  }
+  .ctaContainer .cta .ctaLeft span {
+    font-size: 2.5rem;
+  }
+  .ctaContainer .cta .ctaLeft p {
+    padding: 0 15% 1% 1%;
+    font-size: 1.2rem;
+    color: #EDEFEE;
+  }
+  .ctaContainer .cta .ctaLeft button {
+    margin: 15px 5px 5px 5px;
+    width: 180px;
+    height: 45px;
+    border: 0px solid;
+    border-radius: 10px;
+    background-color: #F4CE14;
+    color: black;
+    font-family: "Markazi Text", serif;
+    font-size: 1.4rem;
+    font-weight: 600;
+    cursor: pointer;
+  }
+  .specialsContainer .specials {
+    width: min(60%, 1920px);
+    height: auto;
+    margin-inline: auto;
+    font-family: "Markazi Text", serif;
+    padding: 1%;
+  }
+  .specialsContainer .specials .specialsTop {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  .specialsContainer .specials .specialsTop h1 {
+    font-size: 2rem;
+    font-weight: 500;
+  }
+  .specialsContainer .specials .specialsTop button {
+    margin: 5px;
+    width: 180px;
+    height: 45px;
+    border: 0px solid;
+    border-radius: 10px;
+    background-color: #F4CE14;
+    color: black;
+    font-family: "Markazi Text", serif;
+    font-size: 1.4rem;
+    font-weight: 600;
+    cursor: pointer;
+  }
+  .specialsContainer .specials .specialsBottom {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .card {
+    width: 300px;
+    margin: 10px;
+  }
+  .card .cardBottom {
+    padding: 5%;
+  }
+  .card span {
+    font-weight: 600;
+    font-family: "Markazi Text", serif;
+    font-size: 1.2rem;
+  }
+  .csContent {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .csTitle {
+    font-size: 1.3rem !important;
+  }
+  .testimonial {
+    margin-bottom: 10px;
+  }
+  .chicagoLeft h1 {
+    font-size: 3rem !important;
+  }
+  .chicagoLeft span {
+    font-size: 1.5rem !important;
+  }
+  .chicagoLeft p {
+    padding: 5% 5% 1% 1%;
+    font-size: 0.8rem !important;
+  }
+  .chicagoRight img:nth-child(2) {
+    position: relative;
+    -o-object-fit: cover;
+       object-fit: cover;
+    width: 200px !important;
+    height: 200px !important;
+    margin-bottom: -20%;
+    box-shadow: 0px 1px 10px 1px #333333;
+  }
+  .chicagoRight img:nth-child(1) {
+    position: absolute;
+    left: 40%;
+    margin-bottom: 15%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    width: 200px !important;
+    height: 200px !important;
+    box-shadow: 0px 1px 10px 1px #333333;
+  }
+  .footer .footerImg img {
+    -o-object-fit: cover;
+       object-fit: cover;
+    width: 150px !important;
+    height: 100px;
+  }
+  .footer ul {
+    padding: 10%;
+  }
+  .footer li {
+    font-size: 0.8rem;
+  }
 }/*# sourceMappingURL=App.css.map */

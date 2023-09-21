@@ -7,6 +7,8 @@ function Nav() {
       <div className='navContainer'> 
       <div className="nav"> 
           <img src={logo} alt="little-lemon-logo"/>
+
+        
           <ul className="active">
             <li> <NavLink to="/"> Home </NavLink>  </li>
             <li> <NavLink to="/"> About </NavLink> </li>
@@ -15,7 +17,7 @@ function Nav() {
             <li> <NavLink to="/"> Order Online </NavLink></li>
             <li> <NavLink to="/"> Login </NavLink></li>
           </ul>
-          <div class="burger-menu active">&#9776;</div>
+        
       </div>
       </div>
     

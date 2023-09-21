@@ -16,7 +16,6 @@ function CustomersSay() {
         </div>
 
         <div className="csContent"> 
-    
         <Testimonial 
             testimonialName="Beatrice"
             testimonialImg={person1}
@@ -39,7 +38,6 @@ function CustomersSay() {
             testimonialName="Felicia"
             testimonialImg={person4}
             testimonialComment="Review text lorem ipsum dolar"/>
-
         </div>
         </div>
         </div>
