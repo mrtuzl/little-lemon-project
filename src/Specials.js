@@ -7,7 +7,7 @@ import lemonDessert from './img/lemon dessert.jpg';
 
 function Specials() {
     return (
-        <div className="specialsContainer"> 
+        <div className="specialsContainer" id='menu'> 
         <div className="specials"> 
         <div className="specialsTop"> 
         <h1> This weeks specials! </h1>

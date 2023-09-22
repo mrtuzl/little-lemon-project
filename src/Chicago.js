@@ -7,7 +7,7 @@ import chefa from '../src/img/marioandadriana.jpg';
 function Chicago() {
     return (
         <> 
-        <div className="chicagoContainer"> 
+        <div className="chicagoContainer" id='about'> 
         <div className="chicago"> 
         <div className="chicagoLeft"> 
         <h1> Little Lemon </h1>

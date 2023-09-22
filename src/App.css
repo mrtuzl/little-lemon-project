@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Karla&family=Markazi+Text:wght@500&display=swap");
 * {
   margin: 0px;
@@ -32,6 +33,10 @@
   display: flex;
   width: min(60%, 1920px);
   margin-inline: auto;
+  cursor: pointer;
+}
+.navContainer .nav .menuButton {
+  display: none;
 }
 .navContainer .nav img {
   width: 25%;
@@ -218,7 +223,7 @@
 .customerSaysContainer .customerSays .csTitle {
   font-size: 1.5rem;
   font-weight: 400;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
 }
 .customerSaysContainer .customerSays .csContent {
   width: 100%;
@@ -350,6 +355,9 @@
     height: 80px;
     transition: background-color 0.3s ease;
     z-index: 1;
+  }
+  .navContainer .nav img {
+    width: 30%;
   }
   .ctaContainer .cta .ctaLeft h1 {
     font-size: 3.5rem;
@@ -490,64 +498,70 @@
     display: flex;
     justify-content: space-around;
   }
+  .navContainer .nav img {
+    width: 50%;
+  }
   .navContainer .nav ul {
+    padding: 20px;
     display: none;
   }
-  .ctaContainer .cta .ctaLeft h1 {
-    font-size: 3.5rem;
-    font-weight: 500;
+  .navContainer .nav .menuButton {
+    display: block;
+    background-color: white;
+    border: 0px solid;
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top: 25%;
+    right: 5%;
   }
-  .ctaContainer .cta .ctaLeft span {
+  .navContainer .nav .open {
+    width: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 80px; /* Navbar yüksekliği */
+    right: 0;
+    background-color: white;
+    z-index: 2;
+    box-shadow: 0px 1px 10px 1px #EDEFEE;
+  }
+  .navContainer .nav .open li {
+    font-size: 1rem !important;
+    padding: 5px;
+  }
+  .ctaContainer .cta .ctaLeft h1 {
     font-size: 2.5rem;
   }
+  .ctaContainer .cta .ctaLeft span {
+    font-size: 2rem;
+  }
   .ctaContainer .cta .ctaLeft p {
-    padding: 0 15% 1% 1%;
-    font-size: 1.2rem;
-    color: #EDEFEE;
+    font-size: 1rem;
   }
   .ctaContainer .cta .ctaLeft button {
     margin: 15px 5px 5px 5px;
-    width: 180px;
-    height: 45px;
-    border: 0px solid;
-    border-radius: 10px;
-    background-color: #F4CE14;
-    color: black;
-    font-family: "Markazi Text", serif;
-    font-size: 1.4rem;
-    font-weight: 600;
-    cursor: pointer;
+    width: 150px;
+    height: 40px;
+    font-size: 1.2rem;
   }
-  .specialsContainer .specials {
-    width: min(60%, 1920px);
+  .ctaContainer .cta .ctaRight {
+    width: 30%;
     height: auto;
-    margin-inline: auto;
-    font-family: "Markazi Text", serif;
-    padding: 1%;
   }
   .specialsContainer .specials .specialsTop {
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 20px;
+    flex-direction: column;
   }
   .specialsContainer .specials .specialsTop h1 {
-    font-size: 2rem;
-    font-weight: 500;
+    font-size: 1.8rem;
+    margin: 20px 0px 20px 0px;
   }
   .specialsContainer .specials .specialsTop button {
-    margin: 5px;
-    width: 180px;
-    height: 45px;
-    border: 0px solid;
-    border-radius: 10px;
-    background-color: #F4CE14;
-    color: black;
-    font-family: "Markazi Text", serif;
-    font-size: 1.4rem;
-    font-weight: 600;
-    cursor: pointer;
+    width: 200px;
+    height: 40px;
+    font-size: 1.2rem;
   }
   .specialsContainer .specials .specialsBottom {
     display: flex;
@@ -556,16 +570,24 @@
     align-items: center;
   }
   .card {
-    width: 300px;
+    width: 250px;
     margin: 10px;
+  }
+  .card img {
+    height: 50%;
   }
   .card .cardBottom {
     padding: 5%;
   }
+  .card p {
+    font-size: 0.8rem !important;
+  }
   .card span {
     font-weight: 600;
-    font-family: "Markazi Text", serif;
-    font-size: 1.2rem;
+    font-size: 1rem !important;
+  }
+  .customerSays h1 {
+    font-size: 2rem;
   }
   .csContent {
     width: 100%;
@@ -579,17 +601,28 @@
   .testimonial {
     margin-bottom: 10px;
   }
+  .chicago {
+    display: flex;
+    flex-direction: column !important;
+  }
+  .chicagoLeft {
+    width: 100% !important;
+  }
   .chicagoLeft h1 {
-    font-size: 3rem !important;
+    font-size: 2rem !important;
   }
   .chicagoLeft span {
     font-size: 1.5rem !important;
   }
   .chicagoLeft p {
-    padding: 5% 5% 1% 1%;
     font-size: 0.8rem !important;
   }
-  .chicagoRight img:nth-child(2) {
+  .chicagoRight {
+    margin-top: 50px;
+    width: 100% !important;
+    padding: 10% 25% 25% 25% !important;
+  }
+  .chicagoRight img:nth-child(1) {
     position: relative;
     -o-object-fit: cover;
        object-fit: cover;
@@ -598,9 +631,9 @@
     margin-bottom: -20%;
     box-shadow: 0px 1px 10px 1px #333333;
   }
-  .chicagoRight img:nth-child(1) {
+  .chicagoRight img:nth-child(2) {
     position: absolute;
-    left: 40%;
+    right: 50% !important;
     margin-bottom: 15%;
     -o-object-fit: cover;
        object-fit: cover;
@@ -608,16 +641,13 @@
     height: 200px !important;
     box-shadow: 0px 1px 10px 1px #333333;
   }
-  .footer .footerImg img {
-    -o-object-fit: cover;
-       object-fit: cover;
-    width: 150px !important;
-    height: 100px;
+  .footer .footerImg {
+    display: none;
   }
-  .footer ul {
+  ul {
     padding: 10%;
   }
-  .footer li {
+  li {
     font-size: 0.8rem;
   }
 }/*# sourceMappingURL=App.css.map */

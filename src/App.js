@@ -1,5 +1,4 @@
 import React from 'react'
-import CallToAction from './CallToAction.js';
 import Homepage from './Homepage.js';
 import Nav from './Nav.js';
 import Footer from './Footer.js';
@@ -13,7 +12,6 @@ function App() {
   return (
     <Router>
     <Nav/>
-    <CallToAction/>
    
       <div className="container"> 
      <meta name="description" content="Little Lemon Restaurant Webpage"/>
