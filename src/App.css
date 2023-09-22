@@ -20,6 +20,7 @@
   font-size: 1.1rem;
   box-shadow: 0px 2px 0px 0px #F4CE14;
   margin-bottom: 1px;
+  position: -webkit-sticky;
   position: sticky;
   display: flex;
   height: 100px;
@@ -33,9 +34,6 @@
   width: min(60%, 1920px);
   margin-inline: auto;
   cursor: pointer;
-}
-.navContainer .nav .menuButton {
-  display: none;
 }
 .navContainer .nav .menuButton {
   display: none;
