@@ -11,7 +11,7 @@ function Specials() {
         <div className="specials"> 
         <div className="specialsTop"> 
         <h1> This weeks specials! </h1>
-        <button> Online Menu </button>
+        <button className='btn'> Online Menu </button>
         </div>
 
         <div className="specialsBottom"> 

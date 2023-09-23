@@ -30,7 +30,7 @@ function CallToAction() {
             <h1> Little Lemon </h1>
             <span> Chicago </span>
             <p>  Ipsum sadipscing sea sadipscing elitr erat amet lorem, invidunt dolor stet dolor amet, aliquyam tempor invidunt accusam et clita amet.</p>
-            <button onClick={handleReserve}> Reserve a Table </button>
+            <button onClick={handleReserve} className='btn'> Reserve a Table </button>
             </div>
     
             <div className="ctaRight"> 

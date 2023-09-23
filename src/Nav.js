@@ -1,5 +1,4 @@
 import logo from '../src/Logo.svg';
-
 import { useState } from 'react';
 import { FaBars, FaTimes } from 'react-icons/fa';
 import {Link} from 'react-scroll';
@@ -16,9 +15,9 @@ function Nav() {
   
       <div className='navContainer'> 
       <div className="nav"> 
-
-          <img src={logo} alt="little-lemon-logo"/>
-         
+     
+          <a href="./"> <img src={logo} alt="little-lemon-logo"/> </a>
+        
         <ul className={` ${isMenuOpen ? 'open' : ''}`}>
  
         

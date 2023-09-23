@@ -14,13 +14,36 @@
   height: auto;
 }
 
+.btn {
+  margin: 5px;
+  width: 180px;
+  height: 50px;
+  border: 0px solid;
+  border-radius: 10px;
+  background-color: #F4CE14;
+  color: black;
+  font-family: "Markazi Text", serif;
+  font-size: 1.4rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn-sm {
+  width: 110px !important;
+}
+
+.btn:hover {
+  transform: scale(1.01);
+  background-color: #ffe600;
+}
+
 .navContainer {
   font-family: "Karla", sans-serif;
   font-weight: 500;
-  font-size: 1.1rem;
+  font-size: 1.05rem;
   box-shadow: 0px 2px 0px 0px #F4CE14;
   margin-bottom: 1px;
-  position: -webkit-sticky;
   position: sticky;
   display: flex;
   height: 100px;
@@ -33,14 +56,14 @@
   display: flex;
   width: min(60%, 1920px);
   margin-inline: auto;
+  align-items: center;
   cursor: pointer;
 }
 .navContainer .nav .menuButton {
   display: none;
 }
 .navContainer .nav img {
-  width: 25%;
-  padding: 1%;
+  width: 175px;
   cursor: pointer;
 }
 .navContainer .nav ul {
@@ -54,6 +77,100 @@
 .navContainer .nav ul li a {
   text-decoration: none;
   color: #495E57;
+  transition: 0.1s;
+}
+.navContainer .nav ul li:hover {
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.reservationContainer {
+  background-color: #495E57;
+  color: #EDEFEE;
+}
+.reservationContainer .reservation {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: min(60%, 1920px);
+  height: auto;
+  margin-inline: auto;
+  font-family: "Karla", sans-serif;
+  padding: 1%;
+}
+.reservationContainer .reservation label {
+  margin: 2%;
+  font-weight: bold;
+}
+.reservationContainer .reservation p {
+  margin: 2%;
+  color: #FBDABB;
+}
+.reservationContainer .reservation .hide {
+  visibility: hidden;
+  font-size: 0.7rem;
+}
+.reservationContainer .reservation .show {
+  visibility: visible;
+}
+.reservationContainer .reservation .input {
+  margin: 2%;
+  width: 225px;
+  height: 45px;
+  border: 1px solid #EDEFEE;
+  border-radius: 10px;
+  padding: 5px 15px 5px 15px;
+  font-family: "Karla", sans-serif;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+.reservationContainer .reservation .time {
+  margin: 0% 0 0 1%;
+}
+.reservationContainer .reservation .select {
+  width: 225px;
+}
+.reservationContainer .reservation h1 {
+  color: #F4CE14;
+  font-size: 3rem;
+  padding: 1%;
+  font-family: "Markazi Text", serif;
+}
+.reservationContainer .reservation .formTop {
+  display: flex;
+  align-items: center;
+}
+.reservationContainer .reservation .formMiddle {
+  display: flex;
+  align-items: center;
+}
+.reservationContainer .reservation .formBottom {
+  display: flex;
+  align-items: center;
+}
+.reservationContainer .reservation .formItem {
+  display: flex;
+  flex-direction: column;
+  margin: 0px 5px 0px 5px;
+}
+.reservationContainer .reservation .info {
+  padding: 1%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.reservationContainer .reservation .info p {
+  color: #EDEFEE;
+  font-size: 1.2rem;
+  margin: 2% 0 2% 0 !important;
+}
+.reservationContainer .reservation .info span {
+  font-weight: bold;
+}
+.reservationContainer .reservation .infoh1 {
+  font-family: "Markazi Text", serif;
+  font-size: 2.5rem;
 }
 
 .ctaContainer {
@@ -85,19 +202,6 @@
   padding: 0 25% 1% 1%;
   font-size: 1.5rem;
   color: #EDEFEE;
-}
-.ctaContainer .cta .ctaLeft button {
-  margin: 5px;
-  width: 180px;
-  height: 50px;
-  border: 0px solid;
-  border-radius: 10px;
-  background-color: #F4CE14;
-  color: black;
-  font-family: "Markazi Text", serif;
-  font-size: 1.4rem;
-  font-weight: 600;
-  cursor: pointer;
 }
 .ctaContainer .cta .ctaRight {
   width: 30%;
@@ -137,19 +241,6 @@
   font-size: 3rem;
   font-weight: 500;
 }
-.specialsContainer .specials .specialsTop button {
-  margin: 5px;
-  width: 180px;
-  height: 50px;
-  border: 0px solid;
-  border-radius: 10px;
-  background-color: #F4CE14;
-  color: black;
-  font-family: "Markazi Text", serif;
-  font-size: 1.4rem;
-  font-weight: 600;
-  cursor: pointer;
-}
 .specialsContainer .specials .specialsBottom {
   display: flex;
   justify-content: space-between;
@@ -162,6 +253,8 @@
   height: auto;
   background-color: #EDEFEE;
   border-radius: 15px;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
 .card img {
   -o-object-fit: cover;
@@ -204,6 +297,10 @@
 }
 .card .cardBottom .order :nth-child(2) {
   margin-left: 10px;
+}
+
+.card:hover {
+  transform: scale(1.02);
 }
 
 .customerSaysContainer {
@@ -357,7 +454,10 @@
     z-index: 1;
   }
   .navContainer .nav img {
-    width: 30%;
+    width: 100px;
+  }
+  .navContainer .nav li:hover {
+    font-size: 1rem !important;
   }
   .ctaContainer .cta .ctaLeft h1 {
     font-size: 3.5rem;
@@ -375,14 +475,6 @@
     margin: 15px 5px 5px 5px;
     width: 180px;
     height: 45px;
-    border: 0px solid;
-    border-radius: 10px;
-    background-color: #F4CE14;
-    color: black;
-    font-family: "Markazi Text", serif;
-    font-size: 1.4rem;
-    font-weight: 600;
-    cursor: pointer;
   }
   .specialsContainer .specials {
     width: min(60%, 1920px);
@@ -406,14 +498,6 @@
     margin: 5px;
     width: 180px;
     height: 45px;
-    border: 0px solid;
-    border-radius: 10px;
-    background-color: #F4CE14;
-    color: black;
-    font-family: "Markazi Text", serif;
-    font-size: 1.4rem;
-    font-weight: 600;
-    cursor: pointer;
   }
   .specialsContainer .specials .specialsBottom {
     display: flex;
@@ -488,6 +572,16 @@
   }
 }
 @media screen and (max-width: 768px) {
+  .btn-sm {
+    width: 225px !important;
+    height: 40px !important;
+  }
+  .info p {
+    font-size: 1rem !important;
+  }
+  .infoh1 {
+    font-size: 1.7rem !important;
+  }
   .navContainer {
     font-size: 0.8rem;
     height: 80px;
@@ -499,7 +593,7 @@
     justify-content: space-around;
   }
   .navContainer .nav img {
-    width: 50%;
+    width: 150px;
   }
   .navContainer .nav ul {
     padding: 20px;
@@ -514,6 +608,10 @@
     height: 50px;
     top: 25%;
     right: 5%;
+    transition: all 0.3s ease;
+  }
+  .navContainer .nav .menuButton:hover {
+    transform: rotate(20deg);
   }
   .navContainer .nav .open {
     width: 150px;
@@ -526,10 +624,26 @@
     background-color: white;
     z-index: 2;
     box-shadow: 0px 1px 10px 1px #EDEFEE;
+    transition: all 0.3s ease;
   }
   .navContainer .nav .open li {
     font-size: 1rem !important;
     padding: 5px;
+  }
+  .reservation .formTop {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .reservation .formMiddle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .reservation .formBottom {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
   .ctaContainer .cta .ctaLeft h1 {
     font-size: 2.5rem;
