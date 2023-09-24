@@ -746,6 +746,9 @@ $colorHighlight2: #333333;
 
     //reservation css
     .reservation{
+        h1{
+            font-size: 2rem !important;
+        }
         .formTop{
             display: flex;
             flex-direction: column;

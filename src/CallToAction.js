@@ -11,7 +11,6 @@ function CallToAction() {
 
     const handleReserve = () => {
         setReservation(!reservation);
-        console.log(reservation)
     }
 
     if (reservation === true) {

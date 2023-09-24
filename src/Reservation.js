@@ -2,11 +2,19 @@ import React from 'react';
 import { useState } from 'react';
 import CallToAction from './CallToAction';
 import validator from "validator";
+import DatePicker from 'react-datepicker';
+import 'react-datepicker/dist/react-datepicker.css';
 
 function Reservation() {
+ 
+    //refresh uyarı mesajı
+    window.onbeforeunload = function (e) {
+        e.preventDefault();
+        e.returnValue = ''; 
+      };
 
     const[reservation, setReservation] = useState();
-    const [submit, setSubmit] = useState(false);
+    const[submit, setSubmit] = useState(false);
 
     function handleSubmit(e) {
         e.preventDefault();
@@ -19,12 +27,11 @@ function Reservation() {
             setSubmit(false)
             }
         }
-    
-    
+
+    const[selectedDate, setSelectedDate] = useState(null);
     const[name, setName] = useState("");  
     const[lastName, setLastName] = useState("");
     const[mail, setMail] = useState("");
-    const[date, setDate] = useState("");
     const[time, setTime] = useState("");
     const[guest, setGuest] = useState("");
     const[occasion, setOccasion] = useState("");
@@ -67,15 +74,16 @@ function Reservation() {
         }
     }
 
-    function changeDate(e) {
-        setDate(e.target.value)
-        if (date === " ") {
+    const changeDate = (date) => {
+        setSelectedDate(date);
+        if (selectedDate === " ") {
             setErrorDate(true)
         } 
         else {
             setErrorDate(false)
         }
-    }
+      };
+
 
     function changeTime(e) {
         setTime(e.target.value)
@@ -109,7 +117,6 @@ function Reservation() {
 
     const handleReserve = () => {
         setReservation(!reservation);
-        console.log(reservation)
     }
 
 
@@ -175,14 +182,14 @@ function Reservation() {
 
                  <div className='formItem'> 
                  <label> Date </label>
-                 <input
-                 className="input select"
-                 type="date"
-                 name="date"
-                 placeholder="10/10/2023"
+                 
+                 <DatePicker
+                 className='input'
+                 selected={selectedDate}
                  onChange={changeDate}
-                 value={date}
-                 />
+                 minDate={new Date()} 
+                    />  
+
                  <p className={`hide ${errorDate ? "show" : ""}`}> Date must be selected</p>
                 </div>
 
@@ -266,7 +273,7 @@ function Reservation() {
                  <div className='info'> 
                  
                  <p> Dear <span> {name} {lastName}, </span> your reservation is confirmed!</p>
-                 <p> Date: <span>{date}</span> </p>
+                 <p> Date: <span>{selectedDate ? selectedDate.toLocaleDateString() : ''}</span> </p>
                  <p> Time: <span>{time}</span> </p>
                  <p> Guests: <span>{guest}</span> </p>
                  <p> Occasion: <span>{occasion}</span> </p>
